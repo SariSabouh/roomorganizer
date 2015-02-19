@@ -1,283 +1,363 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <students>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Sari Sabouh*</fullName>
+		<year>3</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Palestine</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Christopher Serrano</fullName>
+		<year>3</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>USA</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Woong Kwon</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>South Korea</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Taylor Quarles</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>USA</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Alejandro Kirienko</fullName>
+		<year>1</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Spain</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Justin Farmer</fullName>
+		<year>3</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>USA</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Lucas Glinschert</fullName>
+		<year>1</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Germany</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Sebastian Mendez*</fullName>
+		<year>4</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Guatemala</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Cameran Powers</fullName>
+		<year>4</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>USA</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Mason Battles</fullName>
+		<year>2</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>USA</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Salem Mohd</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Jordan</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Sergio Grimaldo</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>USA</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Collins Maroa</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Kenya</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Mouad Mentak</fullName>
+		<year>1</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Morocco</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Martin Pazmino</fullName>
+		<year>1</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Ecuador</country>
+		<gender>M</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>William Britton</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>usa</country>
+		<gender>m</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Sebastian Pena</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>ecuador</country>
+		<gender>m</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Khoi Phan</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Vietnam</country>
+		<gender>m</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Clement Dikoko</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>usa</country>
+		<gender>m</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Kuvvat Jorayev</fullName>
+		<year>2</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>Turkmenistan</country>
+		<gender>m</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Maria Ortiz</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>guatemala</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Moyinoluwa Iduma</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Nigeria</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Bethany Kennedy</fullName>
+		<year>1</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>usa</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Joan Alzoubi</fullName>
+		<year>1</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Jordan</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Marisa Gray</fullName>
+		<year>1</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>usa</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Kimberlyn Mendoza</fullName>
+		<year>1</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Columbia</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Laranda Wstbrook*</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>USA</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Andrea Ortiz</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>guatemala</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Rebekah Britton</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>usa</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Noella Mupungila</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>South Africa</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Tiffany Jeter</fullName>
+		<year>4</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>usa</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Lara Lubienski</fullName>
+		<year>4</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Austria</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Jasmine Beaudette</fullName>
+		<year>4</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>usa</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Ida Sunnaborg</fullName>
+		<year>1</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>finland</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Valeria Pazmino</fullName>
+		<year>3</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country/>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Maria Trabanino</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>el salvador</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Brianna Bell</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>usa</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Natalia Esparragoza</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>Venezuela</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Kanako Seiji</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>Japan</country>
+		<gender>f</gender>
 	</student>
 	<student>
-		<fullName></fullName>
-		<year></year>
-		<sharedBathroom></sharedBathroom>
-		<country></country>
-		<gender></gender>
+		<fullName>Marignima Souane*</fullName>
+		<year>2</year>
+		<sharedBathroom>true</sharedBathroom>
+		<country>Senegal</country>
+		<gender>f</gender>
 	</student>
+	<room>
+		<roomNumber>100F</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>102F</roomNumber>
+		<shared>true</shared>
+	</room>
+	<room>
+		<roomNumber>104F</roomNumber>
+		<shared>true</shared>
+	</room>
+	<room>
+		<roomNumber>106F</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>108F</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>200F</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>202F</roomNumber>
+		<shared>true</shared>
+	</room>
+	<room>
+		<roomNumber>204F</roomNumber>
+		<shared>true</shared>
+	</room>
+	<room>
+		<roomNumber>206F</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>208F</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>101M</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>103M</roomNumber>
+		<shared>true</shared>
+	</room>
+	<room>
+		<roomNumber>105M</roomNumber>
+		<shared>true</shared>
+	</room>
+	<room>
+		<roomNumber>107M</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>109M</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>201M</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>203M</roomNumber>
+		<shared>true</shared>
+	</room>
+	<room>
+		<roomNumber>205M</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>207M</roomNumber>
+		<shared>false</shared>
+	</room>
+	<room>
+		<roomNumber>209M</roomNumber>
+		<shared>false</shared>
+	</room>
+	
 </students>
