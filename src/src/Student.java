@@ -1,7 +1,7 @@
 package src;
 
 public class Student {
-	private String name, country, sex, year;
+	private String name, country, sex, year, requested;
 	boolean bathroom;
 	
 	public Student(){
@@ -10,10 +10,14 @@ public class Student {
 		year = "";
 		sex = "";
 		bathroom = false;
+		requested = "";
 	}
 
 	public void setName(String str){
 		name = str;
+	}
+	public void setRequested(String str){
+		requested = str;
 	}
 	public void setYear(String str){
 		year = str;
@@ -31,6 +35,14 @@ public class Student {
 		sex = str;
 	}
 	
+	public String getRequested(){
+		return requested;
+	}
+	
+	public Boolean hasRequested(){
+		if(!requested.equals("")) return true;
+		else return false;
+	}
 	public String getName(){
 		return name;
 	}

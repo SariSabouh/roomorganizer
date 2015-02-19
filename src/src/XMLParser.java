@@ -18,7 +18,8 @@ public class XMLParser extends DefaultHandler
 	private boolean tagCheck;
 	public ArrayList<Student> students = new ArrayList<Student>();
 	public ArrayList<Room> rooms = new ArrayList<Room>();
-
+	Student ss = new Student();
+	
 	public XMLParser(String filename)
 	{	
 		SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -39,29 +40,39 @@ public class XMLParser extends DefaultHandler
 		if (elementName.equalsIgnoreCase("student")) tagCheck = true;
 		else if (elementName.equalsIgnoreCase("room")) tagCheck = false;
     }
+	
+	public void addStudent(){
+		if (!ss.getSex().equals("") && !ss.getName().equals("")){
+			students.add(ss);
+			ss = new Student();
+		}
+	}
 
 	@Override
     public void endElement(String s, String s1, String element) throws SAXException {
 		if (tagCheck)
-		{
-			Student ss = new Student();
+		{			
 			if (element.equalsIgnoreCase("fullName")) {
 				ss.setName(tmpValue);
+				addStudent();
 			}
 			else if (element.equalsIgnoreCase("year")){
 				ss.setYear(tmpValue);
+				addStudent();
 			}
-			if (element.equalsIgnoreCase("country")){
+			else if (element.equalsIgnoreCase("country")){
 				ss.setCountry(tmpValue);
+				addStudent();
 			}
-			if (element.equalsIgnoreCase("sharedBathroom")){
+			else if (element.equalsIgnoreCase("sharedBathroom")){
 				ss.setBathroom(Boolean.parseBoolean(tmpValue));
+				addStudent();
 			}
-			if (element.equalsIgnoreCase("gender")){
+			else if (element.equalsIgnoreCase("gender")){
 				ss.setSex(tmpValue);
+				addStudent();
 			}
-			students.add(ss);
-		}
+		}		
 		else
 		{
 			if (element.equalsIgnoreCase("roomNumber")) {
