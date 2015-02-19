@@ -4,14 +4,17 @@ public class Student {
 	private String name, country, sex, year;
 	boolean bathroom;
 	
-	public Student(String str){
-		name = str;
+	public Student(){
+		name = "";
 		country = "";
 		year = "";
 		sex = "";
 		bathroom = false;
 	}
-		
+
+	public void setName(String str){
+		name = str;
+	}
 	public void setYear(String str){
 		year = str;
 	}

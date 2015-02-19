@@ -8,16 +8,16 @@ import java.util.Scanner;
 
 public class RoomOrder {
 
-	private ArrayList<Student> students = new ArrayList<Student>();
-	private ArrayList<Room> rooms = new ArrayList<Room>();
+	public ArrayList<Student> students = new ArrayList<Student>();
+	public ArrayList<Room> rooms = new ArrayList<Room>();
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	}
-
+	
 	public void openDatabase(String file) throws IOException {
-		try {
+		/*try {
 			FileReader reader = new FileReader(file);
 			Scanner scan = new Scanner(reader);
 			String name = "";
@@ -36,8 +36,10 @@ public class RoomOrder {
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		}
-		
+		}*/
+		XMLParser xml = new XMLParser("Student Names.xml");
+		students = xml.students;
+		rooms = xml.rooms;
 	}
 	
 	public String getNames()
