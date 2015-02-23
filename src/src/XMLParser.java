@@ -72,6 +72,10 @@ public class XMLParser extends DefaultHandler
 				ss.setSex(tmpValue);
 				addStudent();
 			}
+			else if (element.equalsIgnoreCase("requested")){
+				ss.setRequested(tmpValue);
+				addStudent();
+			}
 		}		
 		else
 		{

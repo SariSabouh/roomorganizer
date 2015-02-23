@@ -15,12 +15,11 @@ public class RoomOrderTest {
 	public void setUp() throws IOException{
 		rmOr = new RoomOrder();
 		rmOr.openDatabase("Student Names.xml");
-		rmOr.createEmptyRooms();
 	}
 	
 	@Test
 	public void testReadNames(){
-		assertEquals("Sari Sabouh* Christopher Serrano Woong Kwon Taylor Quarles Alejandro Kirienko Justin Farmer Lucas Glinschert Sebastian Mendez* Cameran Powers Mason Battles Salem Mohd Sergio Grimaldo Collins Maroa Mouad Mentak Martin Pazmino William Britton Sebastian Pena Khoi Phan Clement Dikoko Kuvvat Jorayev Maria Ortiz Moyinoluwa Iduma Bethany Kennedy Joan Alzoubi Marisa Gray Kimberlyn Mendoza Laranda Wstbrook* Andrea Ortiz Rebekah Britton Noella Mupungila Tiffany Jeter Lara Lubienski Jasmine Beaudette Ida Sunnaborg Valeria Pazmino Maria Trabanino Brianna Bell Natalia Esparragoza Kanako Seiji Marignima Souane* ", rmOr.getNames());
+		assertEquals("Sari Sabouh* Christopher Serrano Woong Kwon Taylor Quarles Alejandro Kirienko Justin Farmer Lucas Glinschert Sebastian Mendez* Cameran Powers Mason Battles International1 Sergio Grimaldo International2 Mouad Mentak Martin Pazmino William Britton International3 Khoi Phan Clement Dikoko International4 Maria Ortiz International5 Bethany Kennedy Joan Alzoubi Marisa Gray Kimberlyn Mendoza Laranda Wstbrook* International6 Rebekah Britton Noella Mupungila American1 American2 American3 Ida Sunnaborg Valeria Pazmino International7 Brianna Bell Natalia Esparragoza American4 Marignima Souane* ", rmOr.getNames());
 	}
 	
 	
@@ -46,6 +45,7 @@ public class RoomOrderTest {
 		rmOr.requestStudent("Sari Sabouh*", "Justin Farmer");
 		rmOr.placeStudents();
 		assertEquals("Sari Sabouh*, Justin Farmer", rmOr.getRoommates("107M"));
+		for(int i = 0; i<rmOr.rooms.size(); i++) System.out.println(rmOr.rooms.get(i).getRoomNum() + ": " + rmOr.rooms.get(i).getStudents());
 	}
 	
 	

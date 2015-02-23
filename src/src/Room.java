@@ -22,9 +22,10 @@ public class Room {
 		return residents;
 	}
 	
-	public Boolean hasSpace(){
-		if(student1.equals("") || student2.equals("")) return true;
-		else return false;
+	public int hasSpace(){
+		if(student1.equals("") && student2.equals("")) return 2;
+		else if ((student1.equals("") && !student2.equals("")) || (!student1.equals("") && student2.equals(""))) return 1;
+		else return 0;
 	}
 	
 	public String getRoomNum(){

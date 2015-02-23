@@ -7,6 +7,7 @@ public class RoomOrder {
 
 	public ArrayList<Student> students = new ArrayList<Student>();
 	public ArrayList<Room> rooms = new ArrayList<Room>();
+	public ArrayList<String> names = new ArrayList<String>();
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -71,7 +72,7 @@ public class RoomOrder {
 	public String getRoommates(String n) {
 		int loc = 0;
 		for(int i = 0; i<rooms.size(); i++){
-			if(n.equals(rooms.get(i).getStudents().contains(n))) loc = i;
+			if(n.equals(rooms.get(i).getRoomNum())) loc = i;
 		}
 		return rooms.get(loc).getStudents();
 	}
@@ -81,65 +82,183 @@ public class RoomOrder {
 		else return false;
 	}
 	
+	public ArrayList<Student> getUS(){
+		ArrayList<Student> us = new ArrayList<Student>();
+		for(int i = 0; i<students.size(); i++){
+			if(students.get(i).getCountry().equals("US") && !names.contains(students.get(i).getName()))
+				us.add(students.get(i));
+		}
+		return us;
+	}
+	
 	public void placeRA(){
 		for(int i = 0; i<students.size();i++){
-			if(students.get(i).getName().contains("*") && checkRequested(i)){
-				if(students.get(i).getSex().equals("M")){
-					if(rooms.get(14).hasSpace()){
-						rooms.get(14).setStudent(students.get(i).getName()); rooms.get(14).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+			if(!names.contains(students.get(i).getName())){
+				if(students.get(i).getName().contains("*") && checkRequested(i)){
+					if(students.get(i).getSex().equals("M")){
+						if(rooms.get(13).hasSpace() == 2){
+							rooms.get(13).setStudent(students.get(i).getName());
+							rooms.get(13).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+						}
+						else if (rooms.get(18).hasSpace() == 2){
+							rooms.get(18).setStudent(students.get(i).getName());
+							rooms.get(18).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+						}
 					}
-					else rooms.get(19).setStudent(students.get(i).getName()); rooms.get(19).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+					else{
+						if(rooms.get(3).hasSpace() == 2){
+							rooms.get(3).setStudent(students.get(i).getName()); rooms.get(3).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+						}
+						else if (rooms.get(8).hasSpace() == 2)
+							rooms.get(8).setStudent(students.get(i).getName()); rooms.get(8).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+					}
+					names.add(students.get(i).getName()); names.add(students.get(students.indexOf(students.get(i))).getRequested());
 				}
-				else{
-					if(rooms.get(4).hasSpace()){
-						rooms.get(4).setStudent(students.get(i).getName()); rooms.get(4).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+				else if(students.get(i).getName().contains("*")){
+					if(students.get(i).getSex().equals("M")){
+						if(rooms.get(13).hasSpace() == 2) rooms.get(13).setStudent(students.get(i).getName());
+						else if (rooms.get(18).hasSpace() == 2) rooms.get(18).setStudent(students.get(i).getName());
 					}
-					else rooms.get(9).setStudent(students.get(i).getName()); rooms.get(9).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+					else{
+						if(rooms.get(3).hasSpace() == 2) rooms.get(3).setStudent(students.get(i).getName());
+						else if (rooms.get(8).hasSpace() == 2) rooms.get(8).setStudent(students.get(i).getName());
+					}
+					names.add(students.get(i).getName());
 				}
 			}
-			else if(students.get(i).getName().contains("*")){
-				if(students.get(i).getSex().equals("M")){
-					if(rooms.get(14).hasSpace()) rooms.get(14).setStudent(students.get(i).getName());
-					else rooms.get(19).setStudent(students.get(i).getName());
-				}
-				else{
-					if(rooms.get(4).hasSpace()) rooms.get(4).setStudent(students.get(i).getName());
-					else rooms.get(9).setStudent(students.get(i).getName());
+		}
+	}
+	
+	public void placeBathrooms(){
+		int room1 = 0;
+		int room2 = 0;
+		int room3 = 0;
+		int room4 = 0;
+		int room5 = 0;
+		int room6 = 0;
+		int room7 = 0;
+		int room8 = 0;
+		for(int i = 0; i<rooms.size(); i++){
+			if(rooms.get(i).getRoomNum().equals("104F")) room1=i;
+			else if(rooms.get(i).getRoomNum().equals("102F")) room2=i;
+			else if(rooms.get(i).getRoomNum().equals("204F")) room3=i;
+			else if(rooms.get(i).getRoomNum().equals("202F")) room4=i;
+			else if(rooms.get(i).getRoomNum().equals("103M")) room5=i;
+			else if(rooms.get(i).getRoomNum().equals("105M")) room6=i;
+			else if(rooms.get(i).getRoomNum().equals("203M")) room7=i;
+			else if(rooms.get(i).getRoomNum().equals("205M")) room8=i;
+			
+		}
+		for(int i = 0; i<students.size(); i++){
+			if(!students.get(i).getBathroom()){
+				if(!names.contains(students.get(i).getName())){
+					if(checkRequested(i)){
+						if(students.get(i).getSex().equals("F")){
+							if(rooms.get(room1).hasSpace() == 2){
+								rooms.get(room1).setStudent(students.get(i).getName());
+								rooms.get(room1).setStudent(students.get(i).getRequested());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room2).hasSpace() == 2){
+								rooms.get(room2).setStudent(students.get(i).getName());
+								rooms.get(room2).setStudent(students.get(i).getRequested());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room3).hasSpace() == 2){
+								rooms.get(room3).setStudent(students.get(i).getName());
+								rooms.get(room3).setStudent(students.get(i).getRequested());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room4).hasSpace() == 2){
+								rooms.get(room4).setStudent(students.get(i).getName());
+								rooms.get(room4).setStudent(students.get(i).getRequested());
+								names.add(students.get(i).getName());
+							}
+						}
+						else{
+							if(rooms.get(room5).hasSpace() == 2){
+								rooms.get(room5).setStudent(students.get(i).getName());
+								rooms.get(room5).setStudent(students.get(i).getRequested());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room6).hasSpace() == 2){
+								rooms.get(room6).setStudent(students.get(i).getName());
+								rooms.get(room6).setStudent(students.get(i).getRequested());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room7).hasSpace() == 2){
+								rooms.get(room7).setStudent(students.get(i).getName());
+								rooms.get(room7).setStudent(students.get(i).getRequested());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room8).hasSpace() == 2){
+								rooms.get(room8).setStudent(students.get(i).getName());
+								rooms.get(room8).setStudent(students.get(i).getRequested());
+								names.add(students.get(i).getName());
+							}
+						}
+					}
+					else{
+						if(rooms.get(room1).hasSpace() != 0){
+							rooms.get(room1).setStudent(students.get(i).getName());
+							names.add(students.get(i).getName());
+						}
+						else if(rooms.get(room2).hasSpace() != 0){
+							rooms.get(room2).setStudent(students.get(i).getName());
+							names.add(students.get(i).getName());
+						}
+						else if(rooms.get(room3).hasSpace() != 0){
+							rooms.get(room3).setStudent(students.get(i).getName());
+							names.add(students.get(i).getName());
+						}
+						else if(rooms.get(room4).hasSpace() != 0){
+							rooms.get(room4).setStudent(students.get(i).getName());
+							names.add(students.get(i).getName());
+						}
+						else if(rooms.get(room5).hasSpace() != 0){
+							rooms.get(room5).setStudent(students.get(i).getName());
+							names.add(students.get(i).getName());
+						}
+						else if(rooms.get(room6).hasSpace() != 0){
+							rooms.get(room6).setStudent(students.get(i).getName());
+							names.add(students.get(i).getName());
+						}
+						else if(rooms.get(room7).hasSpace() != 0){
+							rooms.get(room7).setStudent(students.get(i).getName());
+							names.add(students.get(i).getName());
+						}
+						else if(rooms.get(room8).hasSpace() != 0){
+							rooms.get(room8).setStudent(students.get(i).getName());
+							names.add(students.get(i).getName());
+						}
+					}
 				}
 			}
 		}
 	}
 
-	public void placeStudents() {
+	public void placeStudents(){
 		placeRA();
-		for(int i = 0; i<students.size();i++){
-			if(checkRequested(i)){
-				String gender = students.get(i).getSex();
-				for(int j = 0; j<rooms.size();j++){
-					if(rooms.get(j).hasSpace() || rooms.get(j).getRoomNum().equals(gender)){
-						rooms.get(j).setStudent(students.get(i).getName());
-						rooms.get(j).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+		placeBathrooms();
+		for(int j = 0; j < rooms.size(); j++){
+			for(int i = 0; i<students.size(); i++){
+				if(!names.contains(students.get(i).getName())){
+					if(checkRequested(i)){
+						if(rooms.get(j).hasSpace() == 2 && rooms.get(j).getRoomNum().contains(students.get(i).getSex())){
+							rooms.get(j).setStudent(students.get(i).getName());
+							rooms.get(j).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+							names.add(students.get(i).getName());
+						}
+					}
+					else{
+						if(rooms.get(j).hasSpace() != 0 && rooms.get(j).getRoomNum().contains(students.get(i).getSex())){
+							rooms.get(j).setStudent(students.get(i).getName());
+							names.add(students.get(i).getName());
+						}
 					}
 				}
-			}
-			else{
-				for(int j = 0; j<rooms.size();j++){
-					if(rooms.get(j).hasSpace()){
-					//	rooms.get(j).setStudent(students.get(i).getName());
-					}
-				}
-			}
-			if (students.get(i).getSex().equals("M")){
-				
-			}
-			else if(students.get(i).getSex().equals("F")){
-				
 			}
 		}
-	}
-
-	public void createEmptyRooms() {
-		rooms.add(new Room("207M", false));
 	}
 
 	public void requestStudent(String student, String request) {

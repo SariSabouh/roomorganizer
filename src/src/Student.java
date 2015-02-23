@@ -2,7 +2,7 @@ package src;
 
 public class Student {
 	private String name, country, sex, year, requested;
-	boolean bathroom;
+	private boolean bathroom;
 	
 	public Student(){
 		name = "";
@@ -17,7 +17,8 @@ public class Student {
 		name = str;
 	}
 	public void setRequested(String str){
-		requested = str;
+		if(!str.equals("\n\t\t"))
+			requested = str;
 	}
 	public void setYear(String str){
 		year = str;
@@ -40,8 +41,8 @@ public class Student {
 	}
 	
 	public Boolean hasRequested(){
-		if(!requested.equals("")) return true;
-		else return false;
+		if(requested.equals("")) return false;
+		else return true;
 	}
 	public String getName(){
 		return name;

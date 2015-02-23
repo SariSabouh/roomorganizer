@@ -5,15 +5,18 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Palestine</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Christopher Serrano</fullName>
+		<requested></requested>
 		<year>3</year>
 		<sharedBathroom>true</sharedBathroom>
 		<country>US</country>
 		<gender>M</gender>
 	</student>
 	<student>
+		<requested></requested>
 		<fullName>Woong Kwon</fullName>
 		<year>1</year>
 		<sharedBathroom>false</sharedBathroom>
@@ -21,6 +24,7 @@
 		<gender>M</gender>
 	</student>
 	<student>
+		<requested></requested>
 		<fullName>Taylor Quarles</fullName>
 		<year>2</year>
 		<sharedBathroom>true</sharedBathroom>
@@ -28,6 +32,7 @@
 		<gender>M</gender>
 	</student>
 	<student>
+		<requested></requested>
 		<fullName>Alejandro Kirienko</fullName>
 		<year>1</year>
 		<sharedBathroom>true</sharedBathroom>
@@ -35,6 +40,7 @@
 		<gender>M</gender>
 	</student>
 	<student>
+		<requested></requested>
 		<fullName>Justin Farmer</fullName>
 		<year>3</year>
 		<sharedBathroom>true</sharedBathroom>
@@ -47,6 +53,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Germany</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Sebastian Mendez*</fullName>
@@ -54,6 +61,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Guatemala</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Cameran Powers</fullName>
@@ -61,6 +69,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>US</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Mason Battles</fullName>
@@ -68,13 +77,15 @@
 		<sharedBathroom>false</sharedBathroom>
 		<country>US</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Salem Mohd</fullName>
-		<year>2</year>
-		<sharedBathroom>true</sharedBathroom>
-		<country>Jordan</country>
+		<fullName>International1</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country></country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Sergio Grimaldo</fullName>
@@ -82,13 +93,15 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>US</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Collins Maroa</fullName>
-		<year>2</year>
-		<sharedBathroom>true</sharedBathroom>
-		<country>Kenya</country>
+		<fullName>International2</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country></country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Mouad Mentak</fullName>
@@ -96,6 +109,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Morocco</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Martin Pazmino</fullName>
@@ -103,6 +117,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Ecuador</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>William Britton</fullName>
@@ -110,13 +125,15 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>US</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Sebastian Pena</fullName>
-		<year>2</year>
-		<sharedBathroom>true</sharedBathroom>
-		<country>Ecuador</country>
+		<fullName>International3</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country></country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Khoi Phan</fullName>
@@ -124,6 +141,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Vietnam</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Clement Dikoko</fullName>
@@ -131,13 +149,15 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>US</country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Kuvvat Jorayev</fullName>
-		<year>2</year>
+		<fullName>International4</fullName>
+		<year>1</year>
 		<sharedBathroom>false</sharedBathroom>
-		<country>Turkmenistan</country>
+		<country></country>
 		<gender>M</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Maria Ortiz</fullName>
@@ -145,13 +165,15 @@
 		<sharedBathroom>false</sharedBathroom>
 		<country>Guatemala</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Moyinoluwa Iduma</fullName>
-		<year>2</year>
-		<sharedBathroom>true</sharedBathroom>
-		<country>Nigeria</country>
+		<fullName>International5</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country></country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Bethany Kennedy</fullName>
@@ -159,6 +181,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>US</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Joan Alzoubi</fullName>
@@ -166,6 +189,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Jordan</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Marisa Gray</fullName>
@@ -173,6 +197,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>US</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Kimberlyn Mendoza</fullName>
@@ -180,6 +205,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Columbia</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Laranda Wstbrook*</fullName>
@@ -187,13 +213,15 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>US</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Andrea Ortiz</fullName>
-		<year>2</year>
-		<sharedBathroom>true</sharedBathroom>
-		<country>Guatemala</country>
+		<fullName>International6</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country></country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Rebekah Britton</fullName>
@@ -201,6 +229,7 @@
 		<sharedBathroom>false</sharedBathroom>
 		<country>US</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Noella Mupungila</fullName>
@@ -208,27 +237,31 @@
 		<sharedBathroom>false</sharedBathroom>
 		<country>South Africa</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Tiffany Jeter</fullName>
-		<year>4</year>
-		<sharedBathroom>true</sharedBathroom>
+		<fullName>American1</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
 		<country>US</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Lara Lubienski</fullName>
-		<year>4</year>
-		<sharedBathroom>true</sharedBathroom>
-		<country>Austria</country>
-		<gender>F</gender>
-	</student>
-	<student>
-		<fullName>Jasmine Beaudette</fullName>
-		<year>4</year>
-		<sharedBathroom>true</sharedBathroom>
+		<fullName>American2</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
 		<country>US</country>
 		<gender>F</gender>
+		<requested></requested>
+	</student>
+	<student>
+		<fullName>American3</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country>US</country>
+		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Ida Sunnaborg</fullName>
@@ -236,6 +269,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Finland</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Valeria Pazmino</fullName>
@@ -243,13 +277,15 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Ecuador</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Maria Trabanino</fullName>
-		<year>2</year>
-		<sharedBathroom>true</sharedBathroom>
-		<country>El Salvador</country>
+		<fullName>International7</fullName>
+		<year>1</year>
+		<sharedBathroom>false</sharedBathroom>
+		<country></country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Brianna Bell</fullName>
@@ -257,6 +293,7 @@
 		<sharedBathroom>false</sharedBathroom>
 		<country>US</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Natalia Esparragoza</fullName>
@@ -264,13 +301,15 @@
 		<sharedBathroom>false</sharedBathroom>
 		<country>Venezuela</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
-		<fullName>Kanako Seiji</fullName>
+		<fullName>American4</fullName>
 		<year>1</year>
 		<sharedBathroom>false</sharedBathroom>
-		<country>Japan</country>
+		<country>US</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<student>
 		<fullName>Marignima Souane*</fullName>
@@ -278,6 +317,7 @@
 		<sharedBathroom>true</sharedBathroom>
 		<country>Senegal</country>
 		<gender>F</gender>
+		<requested></requested>
 	</student>
 	<room>
 		<roomNumber>100F</roomNumber>
