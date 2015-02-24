@@ -1,7 +1,10 @@
 package src;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class RoomOrder {
 
@@ -9,15 +12,11 @@ public class RoomOrder {
 	public ArrayList<Room> rooms = new ArrayList<Room>();
 	public ArrayList<String> names = new ArrayList<String>();
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-	
 	public void openDatabase(String file) throws IOException {
 		XMLParser xml = new XMLParser("Student Names.xml");
 		students = xml.students;
 		rooms = xml.rooms;
+		Collections.shuffle(students);
 	}
 	
 	public String getNames()
@@ -82,15 +81,6 @@ public class RoomOrder {
 		else return false;
 	}
 	
-	public ArrayList<Student> getUS(){
-		ArrayList<Student> us = new ArrayList<Student>();
-		for(int i = 0; i<students.size(); i++){
-			if(students.get(i).getCountry().equals("US") && !names.contains(students.get(i).getName()))
-				us.add(students.get(i));
-		}
-		return us;
-	}
-	
 	public void placeRA(){
 		for(int i = 0; i<students.size();i++){
 			if(!names.contains(students.get(i).getName())){
@@ -98,21 +88,21 @@ public class RoomOrder {
 					if(students.get(i).getSex().equals("M")){
 						if(rooms.get(13).hasSpace() == 2){
 							rooms.get(13).setStudent(students.get(i).getName());
-							rooms.get(13).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+							rooms.get(13).setStudent(students.get(i).getRequested());
 						}
 						else if (rooms.get(18).hasSpace() == 2){
 							rooms.get(18).setStudent(students.get(i).getName());
-							rooms.get(18).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+							rooms.get(18).setStudent(students.get(i).getRequested());
 						}
 					}
 					else{
 						if(rooms.get(3).hasSpace() == 2){
-							rooms.get(3).setStudent(students.get(i).getName()); rooms.get(3).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+							rooms.get(3).setStudent(students.get(i).getName()); rooms.get(3).setStudent(students.get(i).getRequested());
 						}
 						else if (rooms.get(8).hasSpace() == 2)
-							rooms.get(8).setStudent(students.get(i).getName()); rooms.get(8).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+							rooms.get(8).setStudent(students.get(i).getName()); rooms.get(8).setStudent(students.get(i).getRequested());
 					}
-					names.add(students.get(i).getName()); names.add(students.get(students.indexOf(students.get(i))).getRequested());
+					names.add(students.get(i).getName()); names.add(students.get(i).getRequested());
 				}
 				else if(students.get(i).getName().contains("*")){
 					if(students.get(i).getSex().equals("M")){
@@ -199,37 +189,62 @@ public class RoomOrder {
 						}
 					}
 					else{
-						if(rooms.get(room1).hasSpace() != 0){
-							rooms.get(room1).setStudent(students.get(i).getName());
-							names.add(students.get(i).getName());
+						if(students.get(i).getSex().equals("F")){
+							if(rooms.get(room1).hasSpace() != 0){
+								rooms.get(room1).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room2).hasSpace() != 0){
+								rooms.get(room2).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room3).hasSpace() != 0){
+								rooms.get(room3).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room4).hasSpace() != 0){
+								rooms.get(room4).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
 						}
-						else if(rooms.get(room2).hasSpace() != 0){
-							rooms.get(room2).setStudent(students.get(i).getName());
-							names.add(students.get(i).getName());
+						else{
+							if(rooms.get(room5).hasSpace() != 0){
+								rooms.get(room5).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room6).hasSpace() != 0){
+								rooms.get(room6).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room7).hasSpace() != 0){
+								rooms.get(room7).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(room8).hasSpace() != 0){
+								rooms.get(room8).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
 						}
-						else if(rooms.get(room3).hasSpace() != 0){
-							rooms.get(room3).setStudent(students.get(i).getName());
-							names.add(students.get(i).getName());
-						}
-						else if(rooms.get(room4).hasSpace() != 0){
-							rooms.get(room4).setStudent(students.get(i).getName());
-							names.add(students.get(i).getName());
-						}
-						else if(rooms.get(room5).hasSpace() != 0){
-							rooms.get(room5).setStudent(students.get(i).getName());
-							names.add(students.get(i).getName());
-						}
-						else if(rooms.get(room6).hasSpace() != 0){
-							rooms.get(room6).setStudent(students.get(i).getName());
-							names.add(students.get(i).getName());
-						}
-						else if(rooms.get(room7).hasSpace() != 0){
-							rooms.get(room7).setStudent(students.get(i).getName());
-							names.add(students.get(i).getName());
-						}
-						else if(rooms.get(room8).hasSpace() != 0){
-							rooms.get(room8).setStudent(students.get(i).getName());
-							names.add(students.get(i).getName());
+					}
+				}
+			}
+		}
+	}
+	
+	public void placeUS(){
+		for(int j = 0; j<rooms.size(); j++){
+			for(int i = 0; i<students.size(); i++){
+				if(students.get(i).getCountry().equals("US")){
+					if(!names.contains(students.get(i).getName())){
+						if((students.get(i).getBathroom() && !rooms.get(j).getBathroom()) || (!students.get(i).getBathroom() && rooms.get(j).getBathroom())){
+							if(rooms.get(j).hasSpace() == 2 && rooms.get(j).getRoomNum().contains(students.get(i).getSex())){
+								rooms.get(j).setStudent(students.get(i).getName());
+								if(students.get(i).hasRequested()){
+									rooms.get(j).setStudent(students.get(i).getRequested());
+									names.add(students.get(i).getRequested());
+								}
+								names.add(students.get(i).getName());
+							}
 						}
 					}
 				}
@@ -237,8 +252,9 @@ public class RoomOrder {
 		}
 	}
 
-	public void placeStudents(){
+	public void placeStudents() throws FileNotFoundException{
 		placeRA();
+		placeUS();
 		placeBathrooms();
 		for(int j = 0; j < rooms.size(); j++){
 			for(int i = 0; i<students.size(); i++){
@@ -246,8 +262,9 @@ public class RoomOrder {
 					if(checkRequested(i)){
 						if(rooms.get(j).hasSpace() == 2 && rooms.get(j).getRoomNum().contains(students.get(i).getSex())){
 							rooms.get(j).setStudent(students.get(i).getName());
-							rooms.get(j).setStudent(students.get(students.indexOf(students.get(i))).getRequested());
+							rooms.get(j).setStudent(students.get(i).getRequested());
 							names.add(students.get(i).getName());
+							names.add(students.get(i).getRequested());
 						}
 					}
 					else{
@@ -259,17 +276,39 @@ public class RoomOrder {
 				}
 			}
 		}
+		String output = "";
+		for(int i = 0; i<rooms.size(); i++) output += (rooms.get(i).getRoomNum() + ": " + rooms.get(i).getStudents());
+		PrintWriter file = new PrintWriter("There You Go!.txt");
+		file.write(output);
+		file.close();
 	}
 
-	public void requestStudent(String student, String request) {
+	public void saveXML() throws FileNotFoundException{
+        String output = "<?xml version=\"1.0\" encoding=\""+ "UTF-8" + "\"?>"+"\r\n<arguments>";
+        for (int i = 0; i<students.size(); i++)
+        {
+            output += students.get(i).toString();
+        }
+        for(int i = 0; i<rooms.size(); i++){
+        	output += rooms.get(i).toString();
+        }
+        output += "\r\n</students>";
+        PrintWriter file = new PrintWriter("Students Names.xml");
+        file.write(output);
+        file.close();
+	}
+	
+	public void requestStudent(String student, String request) throws FileNotFoundException {
 		int loc = 0;
 		int loc2 = 0;
-		for(int i = 0; i < students.size(); i++){
-			if(students.get(i).getName().equals(student)) loc = i;
-			else if(students.get(i).getName().equals(request)) loc2 = i;
+		if(!student.equals("") || !request.equals("")){
+			for(int i = 0; i < students.size(); i++){
+				if(students.get(i).getName().equals(student)) loc = i;
+				else if(students.get(i).getName().equals(request)) loc2 = i;
+			}
+			if(students.get(loc).getSex().equals(students.get(loc2).getSex()))
+				students.get(loc).setRequested(request);
 		}
-		if(students.get(loc).getSex().equals(students.get(loc2).getSex()))
-			students.get(loc).setRequested(request);
+		saveXML();
 	}
-
 }

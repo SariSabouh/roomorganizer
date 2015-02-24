@@ -63,5 +63,17 @@ public class Student {
 	public String getSex(){
 		return sex;
 	}
+	
+	public String toString()
+	{	
+		String output = "";
+		output += "\r\n\t<student>\r\n\t\t<fullName>" + name + "</fullName>";
+		output += "\r\n\t\t<year>"+year+"</year>";
+		output += "\r\n\t\t<sharedBathroom>"+bathroom+"</sharedBathroom>";
+		output += "\r\n\t\t<country>"+country+"</country>";
+		output += "\r\n\t\t<requested>"+requested+"</requestd>";
+		output += "\r\n\t\t<gender>"+sex+"</gender>\r\n\t</student>";
+		return output;
+	}
 }
 
