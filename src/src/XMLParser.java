@@ -15,6 +15,7 @@ public class XMLParser extends DefaultHandler
 {
 	private String tmpName;
 	private String tmpValue;
+	private boolean flag = false;
 	private boolean tagCheck;
 	public ArrayList<Student> students = new ArrayList<Student>();
 	public ArrayList<Room> rooms = new ArrayList<Room>();
@@ -42,9 +43,10 @@ public class XMLParser extends DefaultHandler
     }
 	
 	public void addStudent(){
-		if (!ss.getSex().equals("") && !ss.getName().equals("")){
+		if (flag && !ss.getName().equals("")){
 			students.add(ss);
 			ss = new Student();
+			flag = false;
 		}
 	}
 
@@ -54,26 +56,25 @@ public class XMLParser extends DefaultHandler
 		{			
 			if (element.equalsIgnoreCase("fullName")) {
 				ss.setName(tmpValue);
-				addStudent();
 			}
 			else if (element.equalsIgnoreCase("year")){
 				ss.setYear(tmpValue);
-				addStudent();
 			}
 			else if (element.equalsIgnoreCase("country")){
 				ss.setCountry(tmpValue);
-				addStudent();
 			}
 			else if (element.equalsIgnoreCase("sharedBathroom")){
 				ss.setBathroom(Boolean.parseBoolean(tmpValue));
-				addStudent();
 			}
 			else if (element.equalsIgnoreCase("gender")){
 				ss.setSex(tmpValue);
-				addStudent();
 			}
 			else if (element.equalsIgnoreCase("requested")){
 				ss.setRequested(tmpValue);
+			}
+			else if (element.equalsIgnoreCase("oldRoom")){
+				ss.setRoomy(tmpValue);
+				flag = true;
 				addStudent();
 			}
 		}		

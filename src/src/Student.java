@@ -1,7 +1,7 @@
 package src;
 
 public class Student {
-	private String name, country, sex, year, requested;
+	private String name, country, sex, year, requested, roomie;
 	private boolean bathroom;
 	
 	public Student(){
@@ -11,6 +11,7 @@ public class Student {
 		sex = "";
 		bathroom = false;
 		requested = "";
+		roomie = "";
 	}
 
 	public void setName(String str){
@@ -25,7 +26,8 @@ public class Student {
 	}
 	
 	public void setCountry(String str){
-		country = str;
+		if(!str.equals("\n\t\t"))
+			country = str;
 	}
 	
 	public void setBathroom(boolean str){
@@ -64,6 +66,15 @@ public class Student {
 		return sex;
 	}
 	
+	public void setRoomy(String str) {
+		if(!str.equals("\n\t\t") && (!name.contains("international") || !name.contains("america")))
+			roomie = str;
+	}
+	
+	public String getRoomy(){
+		return roomie;
+	}
+	
 	public String toString()
 	{	
 		String output = "";
@@ -71,9 +82,11 @@ public class Student {
 		output += "\r\n\t\t<year>"+year+"</year>";
 		output += "\r\n\t\t<sharedBathroom>"+bathroom+"</sharedBathroom>";
 		output += "\r\n\t\t<country>"+country+"</country>";
-		output += "\r\n\t\t<requested>"+requested+"</requestd>";
-		output += "\r\n\t\t<gender>"+sex+"</gender>\r\n\t</student>";
+		output += "\r\n\t\t<requested>"+requested+"</requested>";
+		output += "\r\n\t\t<gender>"+sex+"</gender>";
+		output += "\r\n\t\t<oldRoom>"+roomie+"</oldRoom>\r\n\t</student>";
 		return output;
 	}
+
 }
 

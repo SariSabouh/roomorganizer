@@ -37,7 +37,7 @@ public class Room {
 	}
 	public String toString(){
 		String output = "";
-		output += "\r\n\t<room>\r\n\t\t<roomNumber>" + roomNum + "</fullName>";
+		output += "\r\n\t<room>\r\n\t\t<roomNumber>" + roomNum + "</roomNumber>";
 		output += "\r\n\t\t<shared>"+bathroom+"</shared>\r\n\t</room>";
 		return output;
 	}

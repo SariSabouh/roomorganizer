@@ -13,10 +13,9 @@ public class RoomOrder {
 	public ArrayList<String> names = new ArrayList<String>();
 	
 	public void openDatabase(String file) throws IOException {
-		XMLParser xml = new XMLParser("Student Names.xml");
+		XMLParser xml = new XMLParser("Students Names.xml");
 		students = xml.students;
 		rooms = xml.rooms;
-		Collections.shuffle(students);
 	}
 	
 	public String getNames()
@@ -253,6 +252,7 @@ public class RoomOrder {
 	}
 
 	public void placeStudents() throws FileNotFoundException{
+		Collections.shuffle(students);
 		placeRA();
 		placeUS();
 		placeBathrooms();
@@ -268,23 +268,29 @@ public class RoomOrder {
 						}
 					}
 					else{
-						if(rooms.get(j).hasSpace() != 0 && rooms.get(j).getRoomNum().contains(students.get(i).getSex())){
-							rooms.get(j).setStudent(students.get(i).getName());
-							names.add(students.get(i).getName());
+						if(rooms.get(j).getRoomNum().contains(students.get(i).getSex())){
+							if(rooms.get(j).hasSpace() == 1 && (!rooms.get(j).getStudents().contains(students.get(i).getRoomy()))){
+								rooms.get(j).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
+							else if(rooms.get(j).hasSpace() != 0){
+								rooms.get(j).setStudent(students.get(i).getName());
+								names.add(students.get(i).getName());
+							}
 						}
 					}
 				}
 			}
 		}
 		String output = "";
-		for(int i = 0; i<rooms.size(); i++) output += (rooms.get(i).getRoomNum() + ": " + rooms.get(i).getStudents());
+		for(int i = 0; i<rooms.size(); i++) output += (rooms.get(i).getRoomNum() + ": " + rooms.get(i).getStudents() + "\r\n");
 		PrintWriter file = new PrintWriter("There You Go!.txt");
 		file.write(output);
 		file.close();
 	}
 
 	public void saveXML() throws FileNotFoundException{
-        String output = "<?xml version=\"1.0\" encoding=\""+ "UTF-8" + "\"?>"+"\r\n<arguments>";
+        String output = "<?xml version=\"1.0\" encoding=\""+ "UTF-8" + "\"?>"+"\r\n<students>";
         for (int i = 0; i<students.size(); i++)
         {
             output += students.get(i).toString();
@@ -306,7 +312,7 @@ public class RoomOrder {
 				if(students.get(i).getName().equals(student)) loc = i;
 				else if(students.get(i).getName().equals(request)) loc2 = i;
 			}
-			if(students.get(loc).getSex().equals(students.get(loc2).getSex()))
+			if(students.get(loc).getSex().equals(students.get(loc2).getSex()) && !student.equals(request))
 				students.get(loc).setRequested(request);
 		}
 		saveXML();
